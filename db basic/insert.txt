@@ -1,0 +1,129 @@
+insert into manager values("mgr001","Rahul","Subramainan",9945464213,"rahul@gmail.com","rahsub");
+insert into manager values("mgr002","Abhimanyu","Tharik",9942344213,"thar@gmail.com","thor");
+insert into manager values("mgr003","Tarakh","Ekha",9234465213,"terakh@gmail.com","CR7ron");
+insert into manager values("mgr004","Megha","Rakesh",6362268213,"mags@gmail.com","Maggi");
+insert into manager values("mgr005","Vasanth","Vittala",92345464213,"vitalla@rediffmail.com","vasanth123");
+
+
+insert into pg 
+values("pgN001","mgr001","Amba Nivasa","No 46/1","Ramanuja Road Agrahara,","Mysore",9876543210,"ambanivasa@gmail.com",1,1,0,1,0,1,"NIE College",2);
+
+insert into pg 
+values("pgN002","mgr002","Mc Paying Guest","No 1556","Sri Kala Bairaveshwara Complex, Water Tank Road, Vijaynagar 1st Stage,","Mysore",6687643210,"MC@gmail.com",1,0,0,0,1,1,"SJCE College",1);
+
+insert into pg 
+values("pgN007","mgr004","Home Sweet Home","No 76/1","3rd Cross vijayanagar Mantri Mantappa road","Mysore",9867562791,"hsh@gmail.com",1,1,0,1,0,1,"Maharaja Institue of Technology",2);
+
+
+insert into pg values("pgN003","mgr001","Om Sai Ram Paying Guest","No106","4th Cross, Gokulam Park Road, Gokulam,","Mysore",6674543210,"omsairam@gmail.com",1,0,1,1,1,1,"Vidhya Vardhaka College",1);
+
+
+insert into pg values("pgN007","mgr004","Home Sweet PG","No 76/1", "next to SBI ATM, 4th Cross Vijaynagar","Mysore",9867889210,"Homesweet@gmail.com",1,1,1,1,0,1,"Maharaja Institue of Technology",1);
+
+
+insert into pg values("pgN005","mgr005","Sjce Boys Hostel/pg","Campus Roads","University Of Mysore Campus","Mysore",9074543210,"sjce@gmail.com",1,0,0,1,0,1,"SJCE College",1);
+
+
+
+insert into pg values("pgN006","mgr002","Om Shakti Pg for men"," 107 4the cross","Gokulam Park Rd, Gokulam 1st Stage, Gokulam, ","Mysore",9804543210,"omshakthi@gmail.com",1,0,0,0,0,1,"Vidhya Vardhaka College",1);
+
+
+
+
+insert into student values("pgN001","4NI16IS007","Akshay","Rakesh","akshay@gmail.com",8907765767,"NIE College","MIG #209","near MG road brigade","Bengaluru");
+
+
+
+
+insert into student values("4NI16ME090","Zayn","Malik","zayn@gmail.com",934565767,"NIE College","MIG 1084","St.Anthony Church Street","Bengaluru");
+
+
+insert into student values("4NI19CS027","Arun","Ramesh","arunrame@gmail.com",7889765767,"SJCE College","#209 3rd cross","Jayanagar 4th block","Bengaluru");
+
+
+
+
+insert into student values("2SA16IS107","Bobby","Firmino","bob@gmail.com",890772134,"Vidhya Vardhaka College","#409","Basavappa nagar 4th street","Bengaluru");
+
+
+
+insert into student values("4NI17CS001","Adarsh","Manoj","adarsh@gmail.com",8901235767,"SJCE College"," MIG #21","7th Street Thillaiganganagar","Chennai");
+
+
+insert into student values("4NI16IS047","KL","Rahul","kl@gmail.com",8457765767,"MIT College","MIG #987","opposite to KR market","Bengaluru");
+
+insert into student values("4NI14ME047","Mani","Ankith","ankith@gmail.com",9707765767,"NIE College","#987"," Vijaynagar 5th block 3rd street","Bengaluru");
+
+
+insert into room
+ values("pgN001",7,"Double bed",4000,1);
+
+insert into room
+ values("pgN001",3,"Dorm",3500,2);
+
+insert into room
+ values("pgN001",5,"Single bed",4500,3);
+insert into room
+ values("pgN002",4,"Double bed",6500,1);
+insert into room
+ values("pgN003",2,"Double bed",5500,1);
+insert into room
+ values("pgN004",5,"Double bed",6000,1);
+insert into room
+ values("pgN005",10,"Double bed",6500,1);
+insert into room
+ values("pgN006",7,"Double bed",7000,1);
+insert into room
+ values("pgN007",8,"Double bed",7500,1);
+insert into room
+ values("pgN002",2,"Dorm",3800,2);
+insert into room
+ values("pgN003",1,"Dorm",3000,2);
+insert into room
+ values("pgN004",1,"Dorm",2900,2);
+insert into room
+ values("pgN005",2,"Dorm",3000,2);
+insert into room
+ values("pgN002",4,"Single bed",6500,3);
+insert into room
+ values("pgN003",3,"Single bed",6000,3);
+
+
+
+mysql> insert into booked_rooms
+    -> values("pgN002","4NI16IS007",12,3);
+insert into booked_rooms values("pgN001","4NI19CS027",24,2);
+ insert into booked_rooms values("pgN003","4NI14CS018",24,2);
+ insert into booked_rooms values("pgN006","4NI14ME047",24,1);
+
+
+insert into reviews values("4NI14CS018","NICE but not soo clean",4);
+ insert into reviews values("4NI19CS027","Very good",5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into reviews values("","","", );
+
+
+
+
+
+
+
+
+
+

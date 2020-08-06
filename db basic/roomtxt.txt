@@ -1,0 +1,10 @@
+ CREATE TABLE room (PGID varchar(128) NOT NULL, Empty_rooms int(3) DEFAULT NULL, Type1 varchar(20) NOT NULL,   Price int(5) DEFAULT NULL,   room_id int(10) NOT NULL);
+
+
+CREATE TABLE booked_rooms (PGID varchar(128) DEFAULT NULL,stud_id varchar(25) NOT NULL,   Stay_in_months int(10) DEFAULT NULL,room_id int(10)
+  );
+  
+ CREATE TABLE reviews (
+  student_id varchar(25) NOT NULL,
+  review text,rating int(5) DEFAULT NULL,
+  PRIMARY KEY (student_id));

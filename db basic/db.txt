@@ -1,0 +1,81 @@
+create table if not exists Manager
+	(
+	Mgr_id varchar(20) primary key,
+	F_name varchar(20) not null,
+	L_name varchar(20) not null,
+	phone_no bigint(12) not null UNIQUE KEY,
+	email varchar(50) not null UNIQUE KEY,
+	password varchar(50) not null
+    );
+
+
+
+    create table if not exists PG
+    (
+        PGID varchar(128) primary key,
+	mgr_id varchar(30) , foreign key(mgr_id) references Manager(mgr_id) on delete cascade,
+        Pg_name varchar(50) NOT NULL,
+	Flat_no varchar(40) NOT NULL, 
+	Street_Area Varchar(100) NOT NULL, 
+	City Varchar(100) NOT NULL,
+        Contact_no bigint(12) NOT NULL UNIQUE KEY,
+        Email varchar(128) NOT NULL UNIQUE KEY,
+        Bathroom tinyint(1) NOT NULL,
+        Wifi tinyint(1) NOT NULL,
+        AC tinyint(1) NOT NULL ,
+        Meals tinyint(1) NOT NULL,
+        Laundry tinyint(1) NOT NULL,
+        Maid tinyint(1) NOT NULL,
+	landmark varchar(25) NOT NULL,
+	distance_km int(10) NOT NULL
+           );
+
+create table if not exists Student
+    (    
+	Student_id varchar(30) primary key,
+	F_name varchar(30) NOT NULL,
+	L_Name varchar(30) NOT NULL,
+	email varchar(50) UNIQUE,
+	ph_no bigint(15) NOT NULL UNIQUE KEY,
+	College varchar(100) NOT NULL,
+	Flat_no varchar(40) NOT NULL, 
+	Street_Area Varchar(100) NOT NULL, 
+	City Varchar(100) NOT NULL
+    );
+    
+    create table if not exists Room
+    (
+        PGID varchar(128),
+        foreign key(PGID) references PG(PGID) on delete cascade,
+        Empty_rooms int(3),
+	Type1 varchar(20),  
+        Price int(5)
+	room_id int(10), 
+            );
+
+PRIMARY KEY IS PGID AND ROOMID   COMPOSITE KEY
+   
+    create table if not exists reviews 
+    ( 
+        student_id varchar(128), 
+        foreign key(student_id) references Student(Student_id) on delete cascade, 
+    
+        review text not null, 
+        rating int(5) not null
+    );
+STUDENT ID IS PRIMARY KEY
+
+create table if not exists booked_rooms 
+    ( 
+        PGID varchar(128), 
+        foreign key(PGID) references room(PGID) on delete cascade, 
+    	stud_id varchar(25),
+foreign key(stud_id) refernces student(student_id) on delete cascade
+        Stay_in_months int(10), 
+        room_id int(10),
+foreign key(room_id) refernces room(room_id) on delete cascade
+
+    );
+
+
+   
