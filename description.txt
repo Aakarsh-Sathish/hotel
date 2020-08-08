@@ -1,0 +1,14 @@
+In the PG table we have PGID as primary key and mgr_id is the foreign key  which is referencing mgr_id of manager table . This is to get to know which manager/owner is managing or owns that particular pg.
+
+In the manager table we have mgr_id as the primary key as it uniquely identifies each field.
+
+In the student table we have Student_id as the primary key as each student will have only one particular college student id.  So this field uniquely identifies each student.
+
+In the available_room table we have a composite key of PGID and room_id as both of them are required to identify other fields uniquely. It is a weak entity which depends on the PG.  PGID is a foreign key which is referencing PGID of the table pg. This table is used to specify the kinds of room which are available in that particular PG. For example Single , DOuble bedroom and also dorms, which are uniquely identified by the composite key PGID and room_id. It also specifies the number of vacant rooms or space in the PG. 
+When a student opts to choose a particular room in a particular PG, the availabilty of space or room is decreased by 1 automatically. As we have implemented the TRIGGER .
+
+In the booked_rooms table we have a primary key of stud_id as each student can register to only one particular pg . No student can reside or stay in more than 1 PG at a time , hence it is made as a primary key.   We have PGID,room_id as the composite foreign key referencing to the available_room table. As soon as a student registers his PGID,room_id will be stored and automatically the TRIGGER will invoke and reduces the room availabilty by 1.
+
+In the reviews table we have student_id as the primary key and it also acts a foreign key which refers the student_id of the student table.
+This makes sure that a student can give a review to a particular PG only once . As multiple reviews by the same student will increase or decrese  the average rating of the PG . 
+ 
